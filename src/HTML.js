@@ -48,7 +48,8 @@ export default class HTML extends PureComponent {
         baseFontStyle: PropTypes.object.isRequired,
         textSelectable: PropTypes.bool,
         renderersProps: PropTypes.object,
-        allowFontScaling: PropTypes.bool
+        allowFontScaling: PropTypes.bool,
+        numberOfLines: PropTypes.number
     }
 
     static defaultProps = {
@@ -65,7 +66,8 @@ export default class HTML extends PureComponent {
         tagsStyles: {},
         classesStyles: {},
         textSelectable: false,
-        allowFontScaling: true
+        allowFontScaling: true,
+        numnberOfLines: 0
     }
 
     constructor (props) {
@@ -389,6 +391,7 @@ export default class HTML extends PureComponent {
     renderRNElements (RNElements, parentWrapper = 'root', parentIndex = 0, props = this.props) {
         const {
             allowFontScaling,
+            numberOfLines,
             allowedStyles,
             baseFontStyle,
             classesStyles,
@@ -447,6 +450,7 @@ export default class HTML extends PureComponent {
             const textElement = data ?
                 <Text
                   allowFontScaling={allowFontScaling}
+                  numberOfLines={numberOfLines}
                   style={computeTextStyles(
                       element,
                       {

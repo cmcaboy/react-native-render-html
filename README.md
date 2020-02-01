@@ -91,6 +91,7 @@ Prop | Description | Type | Required/Default
 `ptSize` | The default value in pixels for `1pt` | `number` | `1.3`
 `baseFontStyle` | The default style applied to `<Text>` components | `object` | `{ fontSize: 14 }`
 `allowFontScaling` | Specifies whether fonts should scale to respect Text Size accessibility settings | `boolean` | `true`
+`numberOfLines` | Specifies the number of lines of a text based element | `number` | `0`
 `textSelectable` | Allow all texts to be selected | `boolean` | `false`
 `alterData` | Target some specific texts and change their content, see [altering content](#altering-content) | `function` | Optional
 `alterChildren` | Target some specific nested children and change them, see [altering content](#altering-content) | `function` | Optional
